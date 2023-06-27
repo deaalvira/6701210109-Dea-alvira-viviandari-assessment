@@ -16,6 +16,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $textbox1 / $textbox2;
   } else {
     $result = 'Invalid operation';
+  // Perform the arithmetic operation based on the selected operation using switch case
+  switch ($operation) {
+    case '+':
+      $result = $textbox1 + $textbox2;
+      break;
+    case '-':
+      $result = $textbox1 - $textbox2;
+      break;
+    case '*':
+      $result = $textbox1 * $textbox2;
+      break;
+    case '/':
+      $result = $textbox1 / $textbox2;
+      break;
+    default:
+      $result = 'Invalid operation';
   }
 
   // Display the result
